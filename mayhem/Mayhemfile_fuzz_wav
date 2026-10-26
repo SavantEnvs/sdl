@@ -1,0 +1,9 @@
+project: savantenvs/sdl
+target: fuzz_wav
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wav/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wav
+    libfuzzer: true
+    timeout: 5
